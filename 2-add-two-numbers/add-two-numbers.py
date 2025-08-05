@@ -7,7 +7,7 @@
 
 # NOTE: I was having problems with type definition errors, so for the sake of simplicity I made a solution
 #       array called "output" and converted it to a linked list after the fact. This gives a O(n*n) time complexity
-#       which can be improved to O(n) complexity if a linked list append function is defined instead of arr_to_ll
+#       which can be improved to O(n) complexity if a linked list append function is defined instead
 
 def arr_to_ll(input):
     head = ListNode(input[0])
@@ -60,7 +60,7 @@ class Solution(object):
                 #both end at the same time, make output into linked list
                 if(carry == 1):
                     output.append(carry)
-                    
+
                 linked_output = arr_to_ll(output)
                 return linked_output
             else: 
