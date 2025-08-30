@@ -28,26 +28,21 @@ class Solution(object):
             if (char not in characters):
                 characters.append(char)
                 max_len = 1
-        # print(characters)
+
         for sub_len in range(longest, 0, -1):
             index = 0
             while (index + sub_len <= len(s)):
                 substring = s[index:sub_len+index]
                 index +=1
-    
-                # print(substring)
+
                 # Check if substring is valid
                 flag = 0
                 for element in characters:
-                    # print(substring)
-
-                    # print(substring.count(element))
                     if (substring.count(element) > 1):
                         flag = 1
                         break
                 if (flag == 0):
                     #if it's valid update max length and check for maximum
-                    # print("MADE IT")
                     max_len = len(substring)
                     return max_len
         return max_len
