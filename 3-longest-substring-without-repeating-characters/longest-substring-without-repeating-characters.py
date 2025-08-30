@@ -11,7 +11,6 @@ class Solution(object):
         """
         MAX_UNIQUE_SUBSTRING = 97
         max_len = 0
-        characters = []
         # go over all possible substring lengths starting with the largest
         i = 0
         longest = 0
@@ -36,8 +35,7 @@ class Solution(object):
                 if flag == 0:
                     max_len = len(substring)
                     return max_len
-
-                
+       
         return max_len
                 
             
